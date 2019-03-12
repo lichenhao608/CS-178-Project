@@ -14,11 +14,9 @@ trainY = y[:1000]
 
 testX = x[1000:]
 testY = y[1000:]
-
 clf = DecisionTreeClassifier()
 clf.fit(trainX, trainY)
 
 p = clf.predict(testX)
 
-print(p)
 print(np.sum(p == testY)/len(testY))
